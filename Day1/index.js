@@ -1,21 +1,22 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const fs_1 = require("fs");
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+const fs_1 = require('fs');
 const data = (0, fs_1.readFileSync)('./input.txt');
 let a = data.toString().split('\n\n'); // Split the string with two new line
 let array = [];
 for (let i = 0; i < a.length; i++) {
-    array.push(a[i]
-        .split('\n') // again split the string to array by new line
-        .map((i) => Number(i)) // Parse the string to number
-        .reduce((a, b) => a + b) // Find of sum of a single elf
-    );
+  array.push(
+    a[i]
+      .split('\n') // again split the string to array by new line
+      .map((i) => Number(i)) // Parse the string to number
+      .reduce((a, b) => a + b) // Find of sum of a single elf
+  );
 }
 //Part One answer 71300
 // console.log(Math.max(...array));
 function sumThreeLargest(array) {
-    array.sort((a, b) => a - b);
-    array.reverse();
-    return array[0] + array[1] + array[2];
+  array.sort((a, b) => b - a);
+
+  return array[0] + array[1] + array[2];
 }
 console.log(sumThreeLargest(array));
