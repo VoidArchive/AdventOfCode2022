@@ -1,10 +1,11 @@
 import { readFileSync } from 'fs';
 
-const data = readFileSync('./input.txt');
+const data = readFileSync('input.txt');
 
 let a = data.toString().split('\n\n'); // Split the string with two new line
 
-let array = [];
+// console.log(a);
+let array: number[] = [];
 for (let i = 0; i < a.length; i++) {
   array.push(
     a[i]
