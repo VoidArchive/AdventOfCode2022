@@ -157,9 +157,8 @@ function partTwo(data: string[]) {
 
   const spaceAvailable = filesystemSize - root.size;
   const spaceRequired = requiredForUpdate - spaceAvailable;
-  console.log(root);
   return Math.min(...folderSize.filter((s) => s > spaceRequired));
 }
 
 // console.log(partOne(data));
-console.log(partTwo(testData));
+console.log(partTwo(data));
