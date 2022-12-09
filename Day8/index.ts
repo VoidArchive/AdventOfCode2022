@@ -9,10 +9,10 @@ const testGrid = [
   [3, 3, 5, 4, 9],
   [3, 5, 3, 9, 0],
 ];
-const grid = [];
+const grid: number[][] = [];
 
 for (let line of input) {
-  grid.push(line.split('').map(Number));
+  grid.push(line.split('').map((i) => parseInt(i)));
 }
 
 const directions = [

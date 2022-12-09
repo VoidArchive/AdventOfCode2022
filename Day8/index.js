@@ -9,7 +9,7 @@ const testGrid = [
 ];
 const grid = [];
 for (let line of input) {
-    grid.push(line.split('').map(Number));
+    grid.push(line.split('').map((i) => parseInt(i)));
 }
 const directions = [
     [-1, 0],
