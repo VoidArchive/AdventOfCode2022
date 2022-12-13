@@ -92,3 +92,5 @@ const fillCaveCompletely = (grid: string[][]) => {
 
 console.log('Part One:', fillCave(caveGrid));
 console.log('Part Two:', fillCaveCompletely(caveGrid));
+
+console.log(JSON.parse(JSON.stringify(caveGrid)));
