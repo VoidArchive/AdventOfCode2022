@@ -2,11 +2,13 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': ^18.11.10
+  advent: ^2.0.8
   fs: 0.0.1-security
   pdfreader: ^2.0.0
   typescript: ^4.9.3
 
 dependencies:
+  advent: 2.0.8
   fs: 0.0.1-security
   pdfreader: 2.0.0
 
@@ -20,14 +22,37 @@ packages:
     resolution: {integrity: sha512-juG3RWMBOqcOuXC643OAdSA525V44cVgGV6dUDuiFtss+8Fk5x1hI93Rsld43VeJVIeqlP9I7Fn9/qaVqoEAuQ==}
     dev: true
 
+  /@xmldom/xmldom/0.7.9:
+    resolution: {integrity: sha512-yceMpm/xd4W2a85iqZyO09gTnHvXF6pyiWjD2jcOJs7hRoZtNNOO1eJlhHj1ixA+xip2hOyGn+LgcvLCMo5zXA==}
+    engines: {node: '>=10.0.0'}
+    dev: false
+
+  /advent-memory/2.0.6:
+    resolution: {integrity: sha512-mryksmQPuKZ5D2ZjV+eYBNWr7+8m72PN/cdbnU+6L8mV3tx5PqvSXuvAihrSBT55zmR4dBacunANIHkr+gO4Cg==}
+    dev: false
+
+  /advent/2.0.8:
+    resolution: {integrity: sha512-XSmQYTPFdJ6t4xKFpOQ45RN41qshY2jTHTQs+fwQtQGbmKD+3OzHtzOW0vFArTmimd4ppKoFesIQC7gYluuBDA==}
+    dependencies:
+      advent-memory: 2.0.6
+      lodash.isplainobject: 4.0.6
+      uuid: 3.4.0
+    dev: false
+
   /fs/0.0.1-security:
     resolution: {integrity: sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==}
+    dev: false
+
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
     dev: false
 
   /pdf2json/2.0.1:
     resolution: {integrity: sha512-gj1kZOV2cA+bHyyZiwNU8AVduT4L+7dQODtJZRev7/23TZ0Mz5ILVLsaCLX2p7A8cdBYyDq6zXEBUBvtXgpIZg==}
     engines: {node: '>=14.18.0', npm: '>=6.14.15'}
     hasBin: true
+    dependencies:
+      '@xmldom/xmldom': 0.7.9
     dev: false
     bundledDependencies:
       - '@xmldom/xmldom'
@@ -44,3 +69,9 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  /uuid/3.4.0:
+    resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
+    deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    hasBin: true
+    dev: false
